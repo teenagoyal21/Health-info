@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="img/LOGO.jpeg" type="x-icon">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center-align the entire body content */
+        }
+        header {
+            background-color:teal;
+            padding: 10px;
+            color: white;
+        }
+        section {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer {
+            margin-top: 30px;
+        }
+    </style>
+    <title>Child Vaccination History</title>
+</head>
+<body>
+    <header>
+        <h1>Child Vaccination History</h1>
+    </header>
+    <section id="child-info">
+        <h2>Child Information</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Age:</strong> 5 years</p>
+    </section>
+    <section id="vaccine-history">
+        <h2>Vaccination History</h2>
+        <ul>
+            <li>Vaccine A - Date: 2022-01-15</li>
+            <li>Vaccine B - Date: 2022-04-10</li>
+        </ul>
+    </section>
+    <section id="upcoming-vaccines">
+        <h2>Upcoming Vaccines</h2>
+        <ul>
+            <li>Vaccine C - Date: 2023-08-15</li>
+            <li>Vaccine D - Date: 2023-10-20</li>
+        </ul>
+    </section>
+    <section id="vaccination-centers">
+        <h2>Nearby Vaccination Centers</h2>
+        <ul>
+            <li>
+                <strong>Local Health Center</strong><br>
+                Address: 123 Main St, City<br>
+                Phone: 123-456-7890
+            </li>
+            <li>
+                <strong>Community Clinic</strong><br>
+                Address: 456 Park Ave, Town<br>
+                Phone: 987-654-3210
+            </li>
+        </ul>
+    </section>
+    <hr>
+   
+    <h1>Child's Expected Vaccination Schedule</h1>
+    <div>
+        <label for="dateOfBirth">Child's Date of Birth:</label>
+        <input type="date" id="dateOfBirth" />
+        <button style="background-color: rgb(139, 190, 190);"onclick="calculateVaccinationDates()">Calculate</button>
+    </div>
+    <div id="vaccineSchedule"></div>
+    <script>
+        // Your JavaScript code here
+        function calculateVaccinationDates() {
+  const dateOfBirthInput = document.getElementById("dateOfBirth");
+  const dateOfBirth = new Date(dateOfBirthInput.value);
+  const vaccineScheduleDiv = document.getElementById("vaccineSchedule");
+
+  // Check if a valid date is entered
+  if (isNaN(dateOfBirth.getTime())) {
+    vaccineScheduleDiv.innerHTML = "<p>Please enter a valid date of birth.</p>";
+    return;
+  }
+
+  // Define the recommended vaccination schedule based on the child's age
+  const vaccines = [
+    { name: "Vaccine 1", age: 2 },
+    { name: "Vaccine 2", age: 4 },
+    { name: "Vaccine 3", age: 6 },
+    // Add more vaccines and their respective ages here
+  ];
+
+  // Calculate vaccination dates
+  let scheduleHTML = "<h2>Recommended Vaccination Dates:</h2>";
+  for (const vaccine of vaccines) {
+    const vaccinationDate = new Date(dateOfBirth);
+    vaccinationDate.setMonth(vaccinationDate.getMonth() + vaccine.age);
+    scheduleHTML += `<p>${vaccine.name}: ${vaccinationDate.toDateString()}</p>`;
+  }
+
+  vaccineScheduleDiv.innerHTML = scheduleHTML;
+}
+
+
+
+ 
+    </script>
+    <footer>
+       
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<section class="footers bg-light pt-5 pb-3">
+   <div class="container pt-5">
+       <div class="row">
+           <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
+    		    <div class="footers-logo">
+    		        <img src="IMG/LOGO.jpeg" alt="Logo" style="width:120px;">
+    		    </div>
+    		    <div class="footers-info mt-3">
+    		        <p>OUR SOCIAL LINKS</p>
+    		    </div>
+                <div class="social-icons"> 
+                    <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
+                    <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
+                    <a href="https://plusgoogle.com/"><i id="social-gp" class="fa fa-google-plus-square fa-2x social"></i></a>
+                    <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-2x social"></i></a>
+                </div>
+                </div>
+               <div class="col-xs-12 col-sm-6 col-md-2 footers-two">
+                    <h5>QUICK LINKS </h5>
+                    <ul class="list-unstyled">
+                     <li><a href="maintenance.html">Home</a></li>
+                     <li><a href="contact.html">About Us</a></li>
+                     <li><a href="about.html">Services</a></li>
+                     <li><a href="about.html">Privacy Policy</a></li>
+                     <li><a href="about.html">Terms of Use </a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 footers-three">
+                     <h5>VACCINATION INFORMATION</h5>
+                     <ul cl ass="list-unstyled">
+                      <li><a href="maintenance.html">Upcoming Doses</a></li>
+                      <li><a href="contact.html">Vaccine Schedule</a></li>
+                      <li><a href="about.html">Vaccine FAQs</a></li>
+                      
+                     </ul>
+                 </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 footers-four">
+                     <h5>RESOURCES</h5>
+                     <ul class="list-unstyled">
+                      <li><a href="maintenance.html">Guidelines</a></li>
+                     </ul>
+                 </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 footers-five">
+                     <h5>FEEDBACK AND SUPPORT</h5>
+                     <ul class="list-unstyled">
+                        <li><a href="maintenance.html">Feedback Form</a></li>
+                        <li><a href="about.html">Support Links</a></li>
+                       </ul>
+                   </div>
+                   
+              </div>
+          </div>
+       </section>
+       <section class="disclaimer bg-light border">
+           <div class="container"> <hr>
+        <p>&copy; 2023 Child Vaccination History</p>
+    </footer>
+</body>
+</html>

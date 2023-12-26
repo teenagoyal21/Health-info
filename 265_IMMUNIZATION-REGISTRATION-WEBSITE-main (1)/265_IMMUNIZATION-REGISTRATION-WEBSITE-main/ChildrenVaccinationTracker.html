@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="img/LOGO.jpeg" type="x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Vaccination Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color:teal;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .vaccination {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .vaccination h2 {
+            margin: 0;
+        }
+
+        .vaccination p {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Children Vaccination Tracker</h1>
+    </header>
+    <main>
+        <div id="vaccinationList">
+            <!-- Vaccination doses will be dynamically added here -->
+        </div>
+    </main>
+    <script>
+        const vaccinations = [
+            { name: 'Polio Vaccine', age: 'Birth', dose: '1st Dose' },
+            { name: 'BCG Vaccine', age: 'Birth', dose: '1st Dose' },
+            { name: 'Hepatitis B', age: 'Birth', dose: '1st Dose' },
+            { name: 'Diphtheria, Tetanus, Pertussis (DTaP)', age: '6 weeks', dose: '1st Dose' },
+            { name: 'Haemophilus influenzae type b (Hib)', age: '6 weeks', dose: '1st Dose' },
+            { name: 'Pneumococcal conjugate vaccine (PCV13)', age: '6 weeks', dose: '1st Dose' },
+            { name: 'Rotavirus vaccine', age: '6 weeks', dose: '1st Dose' },
+            { name: 'Diphtheria, Tetanus, Pertussis (DTaP)', age: '10 weeks', dose: '2nd Dose' },
+            { name: 'Haemophilus influenzae type b (Hib)', age: '10 weeks', dose: '2nd Dose' },
+            { name: 'Pneumococcal conjugate vaccine (PCV13)', age: '10 weeks', dose: '2nd Dose' },
+            { name: 'Rotavirus vaccine', age: '10 weeks', dose: '2nd Dose' },
+            // Add more vaccinations as needed
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const vaccinationList = document.getElementById('vaccinationList');
+
+            vaccinations.forEach(vaccination => {
+                const vaccinationDiv = document.createElement('div');
+                vaccinationDiv.classList.add('vaccination');
+
+                const h2 = document.createElement('h2');
+                h2.textContent = vaccination.name;
+                vaccinationDiv.appendChild(h2);
+
+                const pAge = document.createElement('p');
+                pAge.textContent = `Age: ${vaccination.age}`;
+                vaccinationDiv.appendChild(pAge);
+
+                const pDose = document.createElement('p');
+                pDose.textContent = `Dose: ${vaccination.dose}`;
+                vaccinationDiv.appendChild(pDose);
+
+                vaccinationList.appendChild(vaccinationDiv);
+            });
+        });
+    </script>
+</body>
+</html>

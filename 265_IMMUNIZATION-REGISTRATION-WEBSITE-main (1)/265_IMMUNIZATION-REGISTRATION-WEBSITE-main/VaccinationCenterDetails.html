@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/LOGO.jpeg" type="x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Centers in District</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        header {
+            background-color:TEAL;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-style: outset;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        li:hover {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        /* Add styles for the links section */
+        #links-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        #links-section a {
+            margin: 0 10px;
+            padding: 10px 10px;
+            background-color:#007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #links-section a:hover {
+            background-color:darkblue;
+        }
+    </style>
+</head>
+<body style="background-color:white">
+    <header>
+        <h1>Vaccination Centers in PUNE DISTRICT</h1>
+    </header>
+
+    <main>
+        <!-- Section for links to the database of children -->
+        <section id="links-section">
+            <h3 style="text-align: center;"><i>Click below to know about the childrens in the age group in a particular loaclity :</i></h3>
+            <a href="#children-database">Children Database</a>
+        </section>
+
+        <!-- Section for displaying vaccination centers -->
+        <section id="centers">
+            <h2>Vaccination Centers</h2>
+            <ul id="centers-list"></ul>
+        </section>
+    </main>
+
+    <script>
+        // Sample vaccination centers data (you would fetch this from the backend)
+        const vaccinationCenters = [
+            {
+                id: 1,
+                name: "Center A",
+                address: "Address of Center A",
+                phone: "111-111-1111",
+            },
+            {
+                id: 2,
+                name: "Center B",
+                address: "Address of Center B",
+                phone: "222-222-2222",
+            },
+            // Add more centers here
+        ];
+
+        const centersList = document.getElementById("centers-list");
+
+        // Function to render vaccination centers
+        function renderCenters() {
+            centersList.innerHTML = "";
+            vaccinationCenters.forEach((center) => {
+                const centerElement = document.createElement("li");
+                centerElement.innerHTML = `
+                    <h3>${center.name}</h3>
+                    <p><strong>Address:</strong> ${center.address}</p>
+                    <p><strong>Phone:</strong> ${center.phone}</p>
+                `;
+                centersList.appendChild(centerElement);
+            });
+        }
+
+        // On page load, render the vaccination centers
+        document.addEventListener("DOMContentLoaded", () => {
+            renderCenters();
+        });
+    </script>
+</body>
+</html>

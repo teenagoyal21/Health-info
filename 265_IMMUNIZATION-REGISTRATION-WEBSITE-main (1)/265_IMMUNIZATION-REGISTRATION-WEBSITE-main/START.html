@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/LOGO.jpeg" type="x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VACCINATION PORTAL</title>
+    <style>
+        .navbar {
+            background-color:rgb(197, 211, 211);
+            border: 1px solid rgb(65, 143, 154);
+            border-radius: 20px;
+            text-align: center;
+            height: max-content;
+            justify-content: center;
+            display: flex;
+        }
+
+        .navbar ul {
+            overflow: auto;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            float: left;
+            list-style-type: none;
+            padding: 15px 25px;
+        }
+
+        a {
+            color: rgb(13, 6, 6);
+            text-decoration: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            lighting-color: blue;
+        }
+
+        .navbar input {
+            border-radius: 10px;
+            border: 5px;
+            padding: 5px;
+        }
+
+        .a {
+            align-content: center;
+            border: 2px solid pink;
+        }
+
+        body {
+            background-color:white;
+            animation: colorChange 10s infinite alternate;
+        }
+        input[type="submit"] {
+            background-color: rgb(151, 218, 252);
+            color: rgb(6, 7, 7);
+            font-weight: bold;
+            border-radius: 1px solid black;
+        }
+
+        /* New Styles for Positioning */
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        img{
+            width: 30%;
+            height: 70%;
+            padding-left: 20px;
+            float: left; /* Added float property */
+            margin-right: 20px; /* Added margin to create space between the image and text */
+            border: darkblue;
+        }
+        hr{
+            border: px solid rgb(58, 57, 57);
+        }
+      
+        ul{
+            line-height:200%;
+        }
+        a:hover{
+color:rgb(32, 104, 104);
+background-color: aliceblue;
+        }
+        div{
+          padding-left: 100px;
+        }
+        h3.vaccination-details{
+            text-align: center;
+        }
+        .c{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .d{
+            padding-right: 150px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;text-decoration-thickness: 1px;border:1px solid rgb(124, 124, 124);background-color:teal;color:white"><b><i>WELCOME TO VACCINATION PORTAL !!</i></b></h2>
+    <!-- if we typed li*4 then we will get four li tags -->
+    <header>
+        <header>
+           
+            <nav class="navbar">
+                <ul>
+                    <li><b><a href="https://google.com">Home</b></a></li>
+                    <li><b><a href="http://127.0.0.1:5500/abtus.html">About Us</a></b></li>
+                    <li><b><a href="a">Services</a></b></li>
+                    <li><b><a href="a">Contact Us</a></b></li>
+                    <div class="search">
+                        <input type="text" name="Search" placeholder="Search here">
+                    </div>
+                </ul>
+            </nav>
+            
+        </header>
+        <hr>
+        <p>
+            <h4 style="font-family: cursive;text-align: center;">Click on the Button below to know more about the vaccination...!!</h4>
+            <div class="button-container">
+                <form action="https://en.wikipedia.org/wiki/Vaccination" target="_blank">
+                    <input class="b" type="submit" value="INFO ABOUT THE VACCINATION">
+                </form></div>
+                <div class="c"><h3>CHECK OUT THE DETAILS OF ALL DISTRICTS IN MAHARASHTA</h3>
+                <form action="http://127.0.0.1:5500/MaharashtraDetails.html" target="_blank">
+                    <input style="background-color: goldenrod;color: black;border: 1px solid black;" class="a" type="submit" value="CHECK OUT THE DETAILS..!!">
+                </form>
+            </div>
+            <hr>
+        </p>
+        <div>
+            <img src="img/pexels-pixabay-459976.jpg" alt="image of baby">
+            <div class="d"style="float: right;"> <!-- Added a container div with float property -->
+                <h3 style="font-family: sans-serif;">WHICH VACCINES DO CHILDREN NEED ?? </h3>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/BCG_vaccine">BCG Vaccine</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/DTaP-IPV-HepB_vaccine"> Hepatitis B Polio vaccine</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Polio_vaccine">Oral Polio Polio vaccine</a> </li>
+                    <li><a href="https://en.wikipedia.org/wiki/Pentavalent_vaccine"> Pentavalent Vaccine</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Rotavirus_vaccine">Rotavirus Vaccine</a> </li>
+                    <li><a href="https://en.wikipedia.org/wiki/Feline_infectious_peritonitis">FIPV Vaccine</a> </li>
+                    <li><a href="https://en.wikipedia.org/wiki/Rubella_vaccine">Measles Rubella Vaccine</a>  </li>
+                    <li><a href="https://en.wikipedia.org/wiki/DPT_vaccine">DPT Vaccine</a> </li>
+                    <li><a href="https://en.wikipedia.org/wiki/Tetanus_vaccine"> Td Vaccine</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Pneumococcal_conjugate_vaccine"> PCV Vaccine</a></li>
+                    <h5>AND MANY MORE...</h5>
+                   
+                </ul><hr>
+             
+            </div>
+        </div>
+    </header>
+
+  
+</body>
+</html>

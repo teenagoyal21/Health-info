@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/LOGO.jpeg" type="x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: TEAL;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(4, 96, 96);
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .content.show {
+            display: block;
+        }
+
+        button.doses-button {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;"><b><i>THIS IS PUNE DISTRICT:</b></i> Welcome to DISTRICT HEAD HEALTH CENTER</h1>
+        <hr>
+        <div class="options">
+            <button onclick="showVaccinationCenters()">1. Know About Vaccination Centers</button>
+            <button onclick="showVaccinationDoses()">2. Vaccination Doses Required</button>
+            <button onclick="showDosesDone()">3. Sign in to know about your Vaccination Details</button>
+        </div>
+        <div class="content" id="vaccinationCenters">
+            <!-- Content for Vaccination Centers -->
+        <a href="http://127.0.0.1:5500/VaccinationCenterDetails.html#children-database"></a>
+        </div>
+        <div class="content" id="vaccinationDoses">
+            <!-- Content for Vaccination Doses Required -->
+            <p>List of vaccination doses required goes here.</p>
+        </div>
+        <div class="content" id="dosesDone">
+            <!-- Content for Doses Done -->
+            <p>Number of vaccination doses done goes here.</p>
+            
+        </div>
+    </div>
+
+    <script>
+      
+    function showVaccinationCenters() {
+        hideAllContents();
+        document.getElementById('vaccinationCenters').classList.add('show');
+        window.open('http://127.0.0.1:5500/VaccinationCenterDetails.html', '_blank');
+    }
+
+    function showVaccinationDoses() {
+        hideAllContents();
+        document.getElementById('vaccinationDoses').classList.add('show');
+        window.open('http://127.0.0.1:5500/ChildrenVaccinationTracker.html', '_blank');
+    }
+
+    function showDosesDone() {
+        hideAllContents();
+        document.getElementById('dosesDone').classList.add('show');
+        window.open('http://127.0.0.1:5500/ChildRegistration.html', '_blank');
+    }
+
+    function hideAllContents() {
+        var contents = document.getElementsByClassName('content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].classList.remove('show');
+        }
+    }
+</script>
+</body>
+</html>
